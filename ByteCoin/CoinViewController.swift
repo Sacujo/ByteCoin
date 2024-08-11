@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class CoinViewController: UIViewController {
     
     let pickerView = UIPickerView()
     let topStack = UIStackView()
@@ -22,7 +22,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
     }
+    
+    
+    
+    
     
     func setupUI() {
         view.backgroundColor = UIColor(named: "BackgroundColour")
@@ -102,6 +107,6 @@ class ViewController: UIViewController {
     }
 }
 
-#Preview{ViewController()}
+#Preview{CoinViewController()}
 
 

@@ -9,21 +9,22 @@
 /* Begin PBXBuildFile section */
 		151C5FD62C681D5000C40BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C5FD52C681D5000C40BF6 /* AppDelegate.swift */; };
 		151C5FD82C681D5000C40BF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C5FD72C681D5000C40BF6 /* SceneDelegate.swift */; };
-		151C5FDA2C681D5000C40BF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C5FD92C681D5000C40BF6 /* ViewController.swift */; };
-		151C5FDD2C681D5000C40BF6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 151C5FDC2C681D5000C40BF6 /* Base */; };
+		151C5FDA2C681D5000C40BF6 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C5FD92C681D5000C40BF6 /* CoinViewController.swift */; };
 		151C5FDF2C681D5200C40BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151C5FDE2C681D5200C40BF6 /* Assets.xcassets */; };
 		151C5FE22C681D5200C40BF6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 151C5FE12C681D5200C40BF6 /* Base */; };
+		151C5FEB2C68208000C40BF6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 151C5FEA2C68208000C40BF6 /* SnapKit */; };
+		151C5FEE2C691A1E00C40BF6 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151C5FED2C691A1E00C40BF6 /* CoinManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		151C5FD22C681D5000C40BF6 /* ByteCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		151C5FD52C681D5000C40BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		151C5FD72C681D5000C40BF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		151C5FD92C681D5000C40BF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		151C5FDC2C681D5000C40BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		151C5FD92C681D5000C40BF6 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		151C5FDE2C681D5200C40BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		151C5FE12C681D5200C40BF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		151C5FE32C681D5200C40BF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		151C5FED2C691A1E00C40BF6 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151C5FEB2C68208000C40BF6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +58,23 @@
 		151C5FD42C681D5000C40BF6 /* ByteCoin */ = {
 			isa = PBXGroup;
 			children = (
+				151C5FEC2C691A0800C40BF6 /* Model */,
 				151C5FD52C681D5000C40BF6 /* AppDelegate.swift */,
 				151C5FD72C681D5000C40BF6 /* SceneDelegate.swift */,
-				151C5FD92C681D5000C40BF6 /* ViewController.swift */,
-				151C5FDB2C681D5000C40BF6 /* Main.storyboard */,
+				151C5FD92C681D5000C40BF6 /* CoinViewController.swift */,
 				151C5FDE2C681D5200C40BF6 /* Assets.xcassets */,
 				151C5FE02C681D5200C40BF6 /* LaunchScreen.storyboard */,
 				151C5FE32C681D5200C40BF6 /* Info.plist */,
 			);
 			path = ByteCoin;
+			sourceTree = "<group>";
+		};
+		151C5FEC2C691A0800C40BF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				151C5FED2C691A1E00C40BF6 /* CoinManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = ByteCoin;
+			packageProductDependencies = (
+				151C5FEA2C68208000C40BF6 /* SnapKit */,
+			);
 			productName = ByteCoin;
 			productReference = 151C5FD22C681D5000C40BF6 /* ByteCoin.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 151C5FC92C681D5000C40BF6;
+			packageReferences = (
+				151C5FE92C68208000C40BF6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 151C5FD32C681D5000C40BF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +143,6 @@
 			files = (
 				151C5FDF2C681D5200C40BF6 /* Assets.xcassets in Resources */,
 				151C5FE22C681D5200C40BF6 /* Base in Resources */,
-				151C5FDD2C681D5000C40BF6 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				151C5FDA2C681D5000C40BF6 /* ViewController.swift in Sources */,
+				151C5FEE2C691A1E00C40BF6 /* CoinManager.swift in Sources */,
+				151C5FDA2C681D5000C40BF6 /* CoinViewController.swift in Sources */,
 				151C5FD62C681D5000C40BF6 /* AppDelegate.swift in Sources */,
 				151C5FD82C681D5000C40BF6 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		151C5FDB2C681D5000C40BF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				151C5FDC2C681D5000C40BF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		151C5FE02C681D5200C40BF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +305,6 @@
 				INFOPLIST_FILE = ByteCoin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +332,6 @@
 				INFOPLIST_FILE = ByteCoin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		151C5FE92C68208000C40BF6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		151C5FEA2C68208000C40BF6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 151C5FE92C68208000C40BF6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 151C5FCA2C681D5000C40BF6 /* Project object */;
 }
